@@ -11,6 +11,7 @@ class Solution:
         time=0  # used for acceleration of q.
         # q is actually the final quotient
         while dividend>=divisor:
+            # noted: the operation sequence of << and -, bracket is necessary.
             tmp=dividend-(divisor<<time)
             if tmp>=0:
                 q+=(1<<time)
