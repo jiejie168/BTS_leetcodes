@@ -18,7 +18,8 @@ Input: [2,2,2,0,1]
 """
 class Solution:
     def findMin(self, nums) -> int:
-        # binary search. there is a little confused for me for this problem
+        # there is a little confused for me for this problem
+        # divide and conquer idea. It is similar to the peak finding problems.
         n=len(nums)
         if nums[0]<nums[n-1]:
             return nums[0]
@@ -36,7 +37,7 @@ class Solution:
 
 
     def findMin_2(self,nums):
-        # use recursive search
+        # use recursive search; divide and conquer.
         return self.find_helper(nums,0,len(nums)-1)
 
     def find_helper(self,nums,left,right):
